@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Weebo Extensions",
+    "name": "Weebo Remote",
     "description": "Extension de pilotage de navigateur pour l'application Weebo.",
     "version": "1.0",
     "minimum_chrome_version": "116",
