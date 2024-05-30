@@ -1,0 +1,58 @@
+# .gitignore pour Windows
+
+# Fichiers de logs
+*.log
+
+# Fichiers de dump
+*.stackdump
+
+# Thumbs.db
+Thumbs.db
+ehthumbs.db
+
+# Fichiers système
+Desktop.ini
+$RECYCLE.BIN/
+
+# Configuration locale Visual Studio
+.vscode/
+.vscode/*
+
+# Base de données Jet / Access
+*.ldb
+
+# Configuration Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VSDIR et fichiers de configuration de solution et de projet
+*.vspscc
+*.vssscc
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Dossiers de ressource
+__MACOSX/
+
+# Fichiers de cache
+*.fseventsd
+*.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+._*
+
+# Fichiers générés par macOS
+*.swp
+.*.swp
+.*.swo
+*.DS_Store
+._*
+
+# Archives à la racine du projet
+/Archive.zip
