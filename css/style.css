@@ -1,0 +1,99 @@
+body {
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+    font-family: "Arial", sans-serif;
+    font-size: 10pt;
+    background-color: #181623;
+    color: white;
+    padding: 8px;
+    margin: 0px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent;
+}
+
+body.active {
+    animation: appActive 1.5s 0s infinite alternate;
+}
+
+body.error {
+    background-color: rgb(130, 0, 0);
+    font-size: 10pt;
+    width: auto;
+    height: auto;
+    animation: backgroundError 2s 0s infinite;
+}
+
+@keyframes appActive {
+    0% { border-color: red; }
+    100% { border-color: orange; }
+}
+
+@keyframes backgroundError {
+    0% { background-color: rgb(130, 0, 0); }
+    95% { background-color: rgb(130, 0, 0); }
+    96% { background-color: rgb(198, 168, 0); }
+    100% { background-color: rgb(198, 168, 0); }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+}
+
+nav ul li a {
+    display: inline-block;
+    line-height: 20px;
+    padding: 3px 4px;
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+    border: 1px solid rgb(133, 133, 133);
+    background-color: #363242;
+    border-radius: 6px;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 24px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h1 img {
+    height: 28px;
+    width: auto;
+}
+
+h2 {
+    margin: 0px 0px 10px 0px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 3px 4px;
+}

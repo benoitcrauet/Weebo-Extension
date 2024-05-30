@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Weebo Extensions",
+    "description": "Extension de pilotage de navigateur pour l'application Weebo.",
+    "version": "1.0",
+    "minimum_chrome_version": "116",
+    "permissions": [
+        "activeTab", 
+        "storage",
+        "tabs",
+        "windows"
+    ],
+    "host_permissions": [
+        "http://*",
+        "https://*"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "64": "icons/logo64.png",
+            "128": "icons/logo128.png",
+            "256": "icons/logo256.png",
+            "512": "icons/logo512.png"
+        }
+    },
+    "icons": {
+        "64": "icons/logo64.png",
+        "128": "icons/logo128.png",
+        "256": "icons/logo256.png",
+        "512": "icons/logo512.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

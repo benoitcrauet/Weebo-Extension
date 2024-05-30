@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Menu principal</a>
+                </li>
+                <li>
+                    <a href="config.html">Configuration</a>
+                </li>
+            </ul>
+        </nav>
+        <h1><img src="icons/logo64.png" alt="Weebo logo"> Weebo remote</h1>
+        <h2>Menu principal</h2>
+
+
+        <script defer src="js/index.js" type="module"></script>
+        <p>
+            <label>
+                Sélectionnez un canal :<br>
+                <select id="selectchannel"></select>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Sélectionnez un conducteur :<br>
+                <select id="selectconductor"></select>
+            </label>
+        </p>
+
+        <p>
+            <label>Initialisation :</label><br>
+            <button type="button" id="conductorpreload">Pré-charger tous les URLs du conducteur</button>
+        </p>
+
+        <p>
+            <label>
+                <input type="checkbox" id="weeboenable">
+                Activer le contrôle du navigateur par Weebo
+            </label><br>
+            Weebo changera automatiquement d'onglets selon le conducteur.
+        </p>
+    </body>
+</html>
