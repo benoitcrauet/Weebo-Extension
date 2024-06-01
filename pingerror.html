@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <title>Erreur</title>
+        <title>
+            Erreur
+        </title>
     </head>
-    <body class="error">
-        <h1><img src="icons/logo64.png" alt="Weebo logo"> Weebo</h1>
-        <h2>Erreur</h2>
+    <body class="errorPopup">
+        <div class="container">
+            <h1 class="d-flex align-items-center gap-1">
+                <img src="icons/logo64.png" alt="Weebo logo">
+                <span>Weebo Remote</span>
+            </h1>
+            <h2>Erreur</h2>
 
-        <p>
-            Weebo ne répond plus.
-        </p>
-        <p>
-            Par sécurité, l'extension a été arrêtée.<br>
-            Veuillez la relancer.
-        </p>
+            <script defer src="js/pingerror.js" type="module"></script>
+
+            <div class="mb-3">
+                Votre instance Weebo ne répond plus.<br>
+                Il s'agit peut-être d'un problème réseau.
+            </div>
+
+            <div class="mb-3">
+                Par sécurité, Weebo Remote s'est désactivé.<br>
+                Vous pouvez le réactiver après vous être assuré que tout fonctionne.
+            </div>
+
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary" id="btnClose">
+                    J'ai compris
+                </button>
+            </div>
+
+        </div>
     </body>
 </html>

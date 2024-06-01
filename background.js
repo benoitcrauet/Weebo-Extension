@@ -202,8 +202,8 @@ setInterval(async () => {
                 chrome.windows.create({
                     url: "pingerror.html",
                     type: "popup",
-                    width: 250,
-                    height: 200,
+                    width: 450,
+                    height: 350,
                     focused: true
                 });
                 enableApp(false);

@@ -11,12 +11,9 @@ body.active {
     animation: appActive 1.5s 0s infinite alternate;
 }
 
-body.error {
-    background-color: rgb(130, 0, 0);
-    font-size: 10pt;
-    width: auto;
-    height: auto;
-    animation: backgroundError 2s 0s infinite;
+body.errorPopup {
+    background-color: rgb(50, 0, 0);
+    animation: backgroundError 5s linear infinite;
 }
 
 @keyframes appActive {
@@ -25,10 +22,9 @@ body.error {
 }
 
 @keyframes backgroundError {
-    0% { background-color: rgb(130, 0, 0); }
-    95% { background-color: rgb(130, 0, 0); }
-    96% { background-color: rgb(198, 168, 0); }
-    100% { background-color: rgb(198, 168, 0); }
+    4% { background-color: rgb(50, 0, 0); }
+    10% { background-color: rgb(147, 0, 0); }
+    16% { background-color: rgb(50, 0, 0); }
 }
 
 
