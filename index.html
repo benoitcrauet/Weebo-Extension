@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Menu principal</a>
+        <div class="container">
+            <ul class="nav gap-1 py-2">
+                <li class="nav-item">
+                    <a class="btn btn-secondary btn-sm" href="index.html">Menu principal</a>
                 </li>
-                <li>
-                    <a href="config.html">Configuration</a>
+                <li class="nav-item">
+                    <a class="btn btn-outline-secondary btn-sm" href="config.html">Configuration</a>
                 </li>
             </ul>
-        </nav>
-        <h1><img src="icons/logo64.png" alt="Weebo logo"> Weebo remote</h1>
-        <h2>Menu principal</h2>
+            <h1 class="d-flex align-items-center gap-1">
+                <img src="icons/logo64.png" alt="Weebo logo">
+                <span>Weebo Remote</span>
+            </h1>
+            <h2>Menu principal</h2>
 
+            <script defer src="js/index.js" type="module"></script>
 
-        <script defer src="js/index.js" type="module"></script>
-        <p>
-            <label>
-                Sélectionnez un canal :<br>
-                <select id="selectchannel"></select>
-            </label>
-        </p>
+            <div class="mb-3">
+                <label class="form-label" for="selectchannel">Canal web</label>
+                <select class="form-select form-select-sm" id="selectchannel"></select>
+                <div class="form-text">
+                    Choisissez le canal web que vous souhaitez écouter.
+                </div>
+            </div>
 
-        <p>
-            <label>
-                Sélectionnez un conducteur :<br>
-                <select id="selectconductor"></select>
-            </label>
-        </p>
+            <div class="mb-3">
+                <label class="form-label" for="selectconductor">Conducteur</label>
+                <select class="form-select form-select-sm" id="selectconductor"></select>
+                <div class="form-text">
+                    Sélectionnez l'émission que vous êtes en train de réaliser.
+                </div>
+            </div>
 
-        <p>
-            <label>Initialisation :</label><br>
-            <button type="button" id="conductorpreload">Pré-charger tous les URLs du conducteur</button>
-        </p>
+            <div class="mb-3">
+                <label class="form-label" for="conductorpreload">Initialisation des URLs</label>
+                <button class="form-control btn btn-sm btn-outline-primary" id="conductorpreload">Ouvrir tous les URLs du conducteur</button>
+                <div class="form-text text-warning">
+                    Attention : tous les onglets actuels de votre navigateur seront fermés et remplacés par les URLs du conducteur sélectionné ci-dessus.
+                </div>
+            </div>
 
-        <p>
-            <label>
-                <input type="checkbox" id="weeboenable">
-                Activer le contrôle du navigateur par Weebo
-            </label><br>
-            Weebo changera automatiquement d'onglets selon le conducteur.
-        </p>
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" value="" role="switch" id="weeboenable">
+                    <label class="form-check-label" for="weeboenable">Activer le contrôle du navigateur par Weebo</label>
+                </div>
+                <div class="form-text">
+                    Weebo Remote changera automatiquement d'onglets.
+                </div>
+            </div>
+
+        </div>
     </body>
 </html>

@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Menu principal</a>
+        <div class="container">
+            <ul class="nav gap-1 py-2">
+                <li class="nav-item">
+                    <a class="btn btn-outline-secondary btn-sm" href="index.html">Menu principal</a>
                 </li>
-                <li>
-                    <a href="config.html">Configuration</a>
+                <li class="nav-item">
+                    <a class="btn btn-secondary btn-sm" href="config.html">Configuration</a>
                 </li>
             </ul>
-        </nav>
-        <h1><img src="icons/logo64.png" alt="Weebo logo"> Weebo remote</h1>
-        <h2>Configuration</h2>
+            <h1 class="d-flex align-items-center gap-1">
+                <img src="icons/logo64.png" alt="Weebo logo">
+                <span>Weebo Remote</span>
+            </h1>
+            <h2>Menu principal</h2>
+
+            <script defer src="js/config.js" type="module"></script>
 
 
-        <script defer src="js/config.js" type="module"></script>
-        <p>
-            Liste des URLs de canaux (1 par ligne) :
-            <textarea id="urllist" rows="8"></textarea>
-        </p>
-        <p>
-            <button id="configSubmit" type="button">Valider</button>
-        </p>
+            <div class="mb-3">
+                <label class="form-label" for="urllist">Liste des URLs de canaux</label>
+                <textarea class="form-control form-control-sm" placeholder="1 URL par ligne" id="urllist" rows="10"></textarea>
+                <div class="form-text">
+                    Inscrivez ici les URLs des différents canaux Web que vous souhaitez relier à vos instances Weebo.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button type="button" id="configSubmit" class="btn btn-sm btn-primary">Valider</button>
+            </div>
+
+        </div>
     </body>
 </html>
