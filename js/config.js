@@ -8,8 +8,8 @@ buttonSubmit.addEventListener("click", async function(e) {
         urlList: fieldUrlList.value
     });
 
-    // Retour à la vue principale
-    window.location.href = "index.html";
+    // Fermeture de la page
+    window.close();
 });
 
 

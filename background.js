@@ -23,7 +23,7 @@ chrome.storage.onChanged.addListener(async (changes, area) => {
             // Si c'est urlList, on relance un scan des canaux
             if(k == "urlList") {
                 let newChannelList = await makeChannelsList(changes.urlList.newValue);
-                chrome.storage.session.set({
+                await chrome.storage.session.set({
                     channelList: newChannelList
                 });
             }
@@ -78,10 +78,8 @@ chrome.storage.onChanged.addListener(async (changes, area) => {
         }
         
         if(changes.channelList !== undefined) {
+            console.debug("Receiving new channel list...");
             channelList = changes.channelList.newValue;
-            chrome.storage.local.set({
-                urlList: urlListFromChannelsList(changes.channelList.newValue)
-            });
             console.debug("New channels list", channelList);
         }
     }
@@ -319,23 +317,6 @@ async function getConductorDetails(url) {
 }
 
 
-
-/**
- * Transforme une liste de canaux en liste d'URL string
- * @param {Object} channelList Liste de canaux générée par makeChannelsList
- * @returns Liste d'URL en string (1 par ligne)
- */
-function urlListFromChannelsList(channelList) {
-    let urlList = [];
-
-    for(const c in channelList) {
-        urlList.push(channelList[c].url);
-    };
-    
-    return urlList.join("\n");
-}
-
-
 /**
  * Récupère les informations du canal web spécifié par l'URL d'entrée.
  * @param {string} url URL du canal web à analyser
@@ -498,12 +479,24 @@ function enableApp(enable=true) {
 
 function setEnabledBadge(enabled=true) {
     if(enabled) {
-        chrome.action.setBadgeText({ text: " ", font: "8px sans-serif" });
-        chrome.action.setBadgeBackgroundColor({ color: [255, 0, 0, 180] });
+        chrome.action.setIcon({
+            path: {
+                "64": "icons/logoOn64.png",
+                "128": "icons/logoOn128.png",
+                "256": "icons/logoOn256.png",
+                "512": "icons/logoOn512.png",
+            }
+        });
     }
     else {
-        chrome.action.setBadgeText({ text: "" });
-        chrome.action.setBadgeBackgroundColor({ color: [0, 0, 0, 0] });
+        chrome.action.setIcon({
+            path: {
+                "64": "icons/logo64.png",
+                "128": "icons/logo128.png",
+                "256": "icons/logo256.png",
+                "512": "icons/logo512.png",
+            }
+        });
     }
 }
 
